@@ -7,7 +7,7 @@
 
 
 
-**Current features**
+## Current features
 - XP + leveling system with cooldowns and rank roles
 - Message logging for deleted and edited messages (including attachments!)
 - Leaderboard and rank checking
@@ -19,7 +19,7 @@
 
 
 
-**Default settings** (can change in code)
+## Default settings (can change in code)
 | **Setting** | **Location** | **Code Snippet** | **Change This If** |
 |---|---|---|---|
 | **Command Prefix** | Line 17 | `bot = commands.Bot(command_prefix="!", intents=intents)` | You want to change the prefix from `!` to something else (e.g. `?`, `/`, etc.) |
