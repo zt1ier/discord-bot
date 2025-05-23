@@ -5,6 +5,8 @@
 - Feel free to fork, remix, or use it as a base for your own server bot
 
 
+
+
 **Current features**
 - XP + leveling system with cooldowns and rank roles
 - Message logging for deleted and edited messages (including attachments!)
@@ -13,6 +15,8 @@
 - Role auto-assign on join
 - Channel-limited commands with mod/dev bypass
 - Custom help embed with split view for mods and users
+
+
 
 
 **Default settings** (can change in code)
