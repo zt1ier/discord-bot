@@ -5,25 +5,24 @@
 - Feel free to fork, remix, or use it as a base for your own server bot
 
 ## Current features
-- XP + leveling system with cooldowns and rank roles
+- XP + leveling system with cooldowns and random gain per message
+- Role rewards when reaching level milestones
+- Leaderboard and rank checking (with role name display)
 - Message logging for deleted and edited messages (including attachments!)
-- Leaderboard and rank checking
 - Mod commands like kick, ban, unban, purge
-- Role auto-assign on join
-- Channel-limited commands with mod/dev bypass
-- Custom help embed with split view for mods and users
+- Role auto-assign on member join
+- Channel-limited commands with mod/admin bypass
+- Custom help embed that shows different views for mods and regular users
+- Manual XP adjustment via points command (admin only)
 
-## Default settings (can change in code)
+## Default settings (can change in code or .env file)
 | **Setting** | **Location** | **Code Snippet** | **Change This If** |
 |---|---|---|---|
-| **Command Prefix** | Line 17 | `bot = commands.Bot(command_prefix="!", intents=intents)` | You want to change the prefix from `!` to something else (e.g. `?`, `/`, etc.) |
-| **Intents (Permissions)** | Lines 11-13 | `intents.message_content = True`<br>`intents.guilds = True`<br>`intents.members = True` | You need to enable/disable what data your bot can access (e.g., messages, members) |
-| **XP Role Milestones** | Lines 28-34 | `level_milestones = { ... }` | You want to edit XP requirements or change the role names for levels. |
-| **XP Gain Cooldown & Cap** | Line 39 | `XP_CAP_PER_MINUTE = 50` | You want users to earn more or less XP per minute. |
-| **Role IDs (Mod/Dev)** | Lines 41-42 | `MOD_ROLE_ID = ...`<br>`DEV_ROLE_ID = ...` | The mod/dev roles have different IDs in your server. |
-| **Command Channel ID** | Line 43 | `CONTROL_ROOM_CHANNEL_ID = ...` | You want to allow commands in only one different channel. |
-| **User Logs Channel ID** | Line 44 | `USER_LOGS_CHANNEL_ID = ...` | You want to log deleted/edited messages in a different channel. |
-| **Default Role on Join**   | Line 136 | `role_name = "Recruit"` | You want new users to get a different role when they join. |
-| **Random XP Gain** | Line 177 | `xp_gain = random.randint(1, 5)` | You want users to gain more or less XP per message. |
-
-Feel free to contact me for inquiries... somewhere. I don't know if GitHub has a private messaging system, so you may shoot me a message at **ffztier@gmail.com**.
+| **BOT Command Channel ID** | .env | `BOT_CHANNEL_ID = int(os.getenv(...))` | You want to allow commands in only one different channel. |
+| **Command Prefix** | .env | `prefix = os.getenv("COMMAND_PREFIX")` | You want to change the prefix from `!` to something else (e.g. `?`, `/`, etc.) |
+| **MOD / DEV Role IDs** | .env | `MOD_ROLE_ID = int(os.getenv(...))`<br>`DEV_ROLE_ID = int(os.getenv(...))` | The mod/dev roles have different IDs in your server. |
+| **User Logs Channel ID** | .env | `USER_LOGS_CHANNEL_ID = int(os.getenv(...))` | You want to log deleted/edited messages in a different channel. |
+| **Intents (Permissions)** | Lines 30–33 | `intents.message_content = True`<br>`intents.guilds = True`<br>`intents.members = True` | You need to enable/disable what data your bot can access (e.g., messages, members) |
+| **XP Gain Cooldown & Cap** | Lines 44–45 | `XP_CAP_PER_MINUTE = 50` | You want users to earn more or less XP per minute. |
+| **XP Role Milestones** | Lines 48–54 | `level_milestones = { ... }` | You want to edit XP requirements or change the role names for levels. |
+| **Random XP Gain** | Line 202 | `xp_gain = random.randint(1, 5)` | You want users to gain more or less XP per message. |
