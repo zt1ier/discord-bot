@@ -27,6 +27,6 @@
 | **XP Role Milestones** | Lines 48–54 | `level_milestones = { ... }` | You want to edit XP requirements or change the role names for levels. |
 | **Random XP Gain** | Line 202 | `xp_gain = random.randint(1, 5)` | You want users to gain more or less XP per message. |
 
-That being said, the line locations might be innacurate. If there are other
+That being said, the line locations might be innacurate. Yeah. My bad.
 
 Feel free to contact me for inquiries... somewhere. I don't know if GitHub has a private messaging system, so you may shoot me a message at **ffztier@gmail.com**.
