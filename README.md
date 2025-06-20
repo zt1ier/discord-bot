@@ -18,10 +18,10 @@
 ## Default settings (can change in code or .env file)
 | **Setting** | **Location** | **Code Snippet** | **Change This If** |
 |---|---|---|---|
-| **BOT Command Channel ID** | .env | `BOT_CHANNEL_ID = int(os.getenv(...))` | You want to allow commands in only one different channel. |
-| **Command Prefix** | .env | `prefix = os.getenv("COMMAND_PREFIX")` | You want to change the prefix from `!` to something else (e.g. `?`, `/`, etc.) |
-| **MOD / DEV Role IDs** | .env | `MOD_ROLE_ID = int(os.getenv(...))`<br>`DEV_ROLE_ID = int(os.getenv(...))` | The mod/dev roles have different IDs in your server. |
-| **User Logs Channel ID** | .env | `USER_LOGS_CHANNEL_ID = int(os.getenv(...))` | You want to log deleted/edited messages in a different channel. |
+| **BOT Command Channel ID** | .env | `BOT_CHANNEL_ID=` | You want to allow commands in only one different channel. |
+| **Command Prefix** | .env | `prefix=` | You want to change the prefix from `!` to something else (e.g. `?`, `/`, etc.) |
+| **MOD / DEV Role IDs** | .env | `MOD_ROLE_ID=`<br>`DEV_ROLE_ID=` | The mod/dev roles have different IDs in your server. |
+| **User Logs Channel ID** | .env | `USER_LOGS_CHANNEL_ID=` | You want to log deleted/edited messages in a different channel. |
 | **Intents (Permissions)** | Lines 30–33 | `intents.message_content = True`<br>`intents.guilds = True`<br>`intents.members = True` | You need to enable/disable what data your bot can access (e.g., messages, members) |
 | **XP Gain Cooldown & Cap** | Lines 44–45 | `XP_CAP_PER_MINUTE = 50` | You want users to earn more or less XP per minute. |
 | **XP Role Milestones** | Lines 48–54 | `level_milestones = { ... }` | You want to edit XP requirements or change the role names for levels. |
