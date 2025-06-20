@@ -19,7 +19,7 @@
 | **Setting** | **Location** | **Code Snippet** | **Change This If** |
 |---|---|---|---|
 | **BOT Command Channel ID** | .env | `BOT_CHANNEL_ID=` | You want to allow commands in only one different channel. |
-| **Command Prefix** | .env | `prefix=` | You want to change the prefix from `!` to something else (e.g. `?`, `/`, etc.) |
+| **Command Prefix** | .env | `COMMAND_PREFIX=` | You want to change the prefix from `!` to something else (e.g. `?`, `/`, etc.) |
 | **MOD / DEV Role IDs** | .env | `MOD_ROLE_ID=`<br>`DEV_ROLE_ID=` | The mod/dev roles have different IDs in your server. |
 | **User Logs Channel ID** | .env | `USER_LOGS_CHANNEL_ID=` | You want to log deleted/edited messages in a different channel. |
 | **Intents (Permissions)** | Lines 30–33 | `intents.message_content = True`<br>`intents.guilds = True`<br>`intents.members = True` | You need to enable/disable what data your bot can access (e.g., messages, members) |
