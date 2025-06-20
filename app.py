@@ -45,14 +45,14 @@ XP_CAP_PER_MINUTE = 50  # Max XP that can be gained per minute
 xp_cooldown = {} # Cooldown tracking dictionary: {user_id: {"xp": int, "timestamp": float}}
 
 # XP milestones for levels and corresponding roles
+# Change XP and role as you desire
 level_milestones = {
-    1: {"xp": 0, "role": "Recruit"},
-    2: {"xp": 500, "role": "Cadet"},
-    3: {"xp": 5000, "role": "Sergeant"},
-    4: {"xp": 25000, "role": "Operative"},
-    5: {"xp": 50000, "role": "Marshall"},
+    1: {"xp": 0, "role": "ROLE_NAME_1"},
+    2: {"xp": 500, "role": "ROLE_NAME_2"},
+    3: {"xp": 5000, "role": "ROLE_NAME_3"},
+    4: {"xp": 25000, "role": "ROLE_NAME_4"},
+    5: {"xp": 50000, "role": "ROLE_NAME_5"},
 }
-
 
 # Load XP data from file if it exists
 if os.path.exists(XP_FILE):
@@ -68,8 +68,6 @@ else:
 
 # Save XP data to JSON file
 # Also makes a .bak backup
-
-# function to save XP data back to the file after changes
 def save_xp():
     with open(XP_FILE, "w") as file:
         json.dump(xp_data, file)
