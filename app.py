@@ -13,7 +13,7 @@ import shutil # For backing up XP file
 
 
 # ======================================================== #
-# ==================== CONFIGURATION ==================== #
+# ==================== CONFIGURATION ===================== #
 # ======================================================== #
 
 load_dotenv() # Load environment variables from .env file
