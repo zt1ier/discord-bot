@@ -415,5 +415,17 @@ async def unban(ctx, *, user: str):
             return
     await ctx.send("Yeah, that user doesn't exist, chief.")
     
+
+# message: Send a message in the specified channel
+@bot.command(aliases=["msg"])
+@commands.has_permissions(send_messages=True)
+async def message(ctx, channel: discord.TextChannel, *, msg):
+    perms = channel.permissions_for(ctx.guild.me)
+    if not perms.send_messages:
+        await ctx.send(f"I don't have message perms in that channel dumbo.")
+        return
     
+    await channel.send(msg)
+
+
 bot.run(token)
